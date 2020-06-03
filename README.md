@@ -19,8 +19,14 @@ logreg = LogisticRegression()
 
 Finally, train the model, evaluate it, use it for prediction
 ```python
-trained_model, classes = classifier.train_model(logreg, training_data, spacy_tokens=True, glove=False)
+trained_model, classes = classifier.train_model(logreg, training_data, spacy_tokens=True)
 classifier.test_model(trained_model, training_data, classes)
 classifier.predict_category('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', trained_model)
 ```
+
+## Settings
+There are three modes, mutually exclusive:
+1. a fast, simple mode based on a tf-idf vectorizer and with a trivial tokenizer. 
+2. a slower one using spacy's tokenizer
+3. a slower one using Glove embeddings
 
