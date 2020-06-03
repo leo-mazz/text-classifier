@@ -26,7 +26,7 @@ classifier.predict_category('Lorem ipsum dolor sit amet, consectetur adipiscing 
 
 ## Settings
 There are three modes, mutually exclusive:
-1. a fast, simple mode based on a tf-idf vectorizer and with a trivial tokenizer. 
-2. a slower one using spacy's tokenizer
-3. a slower one using Glove embeddings
+1. a fast, simple mode based on a tf-idf vectorizer and with a trivial tokenizer (default).
+2. a slower one using spacy's tokenizer (activate with `spacy_tokens=True`).
+3. a slower one using Glove embeddings (activate with `glove=True`).
 
